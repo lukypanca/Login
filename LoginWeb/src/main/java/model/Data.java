@@ -4,13 +4,15 @@ public class Data {
     private String department;
     private String studentId;
     private long mark;
+    private long pass;
     
     
-    public Data(int id, String department, String studentId, long marks) {
+    public Data() {
     	this.id = id;
     	this.department = department;
     	this.studentId = studentId;
     	this.mark = mark;
+    	this.pass = pass;
     }
     
     // Getter Method
@@ -30,6 +32,10 @@ public class Data {
     	return mark;
     }
     
+    public long getPass() {
+    	return pass;
+    }
+    
     // Setter Method
     public void setId(int id) {
     	this.id = id;
@@ -45,5 +51,9 @@ public class Data {
     
     public void setMark(long mark) {
     	this.mark = mark;
+    }
+    
+    public void setPass(long pass) {
+    	this.pass = pass;
     }
 }
