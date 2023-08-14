@@ -1,53 +1,52 @@
 package response;
 
+import java.util.List;
+
 public class UserResponse {
 
 	
-	private String studentId;
+	private List<StudentDataResponse> data;
     private String department;
-    private Integer mark;
-    private int pass;
+    private double pass;
     
     //Constructor
     public UserResponse() {
-    	this.studentId = studentId;
+    	this.data = data;
     	this.department = department;
-    	this.mark = mark;
     	this.pass = pass;
     }
     
     //Getter
-    public String getStudentId() {
-    	return studentId;
+    public List<StudentDataResponse> getStudentDataResponses() {
+    	return data;
     }
-    
     public String getDepartment() {
     	return department;
     }
     
-    public Integer getMark() {
-    	return mark;
-    }
-    
-    public int getPass() {
+    public double getPass() {
     	return pass;
     }
     
     //Setter
-    public void setStudentId(String studentId) {
-    	this.studentId = studentId;
+    public void setData(List<StudentDataResponse> data) {
+    	this.data = data;
     }
     
     public void setDepartment(String department) {
     	this.department = department;
     }
     
-    public void setMark(Integer mark) {
-    	this.mark = mark;
+    public void setPass(double pass) {
+    	this.pass = pass;
     }
     
-    public void setPass(int pass) {
-    	this.pass = pass;
+    public String toString() {
+        return "UserResponse{" +
+                "data=" + data +
+                ", department='" + department + '\'' +
+                ", pass=" + pass +
+                '}';
     }
     
 }

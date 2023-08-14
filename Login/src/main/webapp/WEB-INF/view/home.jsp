@@ -25,13 +25,19 @@
 	</thead>
 	<tbody>
 	<% for(UserResponse user : users){ %>
-	<tr>
-		<td><%=user.getDepartment() %></td>
-		<td><a href="<%=request.getContextPath()%>/getId?id=<%=user.getStudentId() %>"><%=user.getStudentId() %></a></td>
-		<td><%=user.getMark() %></td>
-		<td><%=user.getPass() %></td>
-	</tr>
-		<%} %>
+		<tr>
+			<td rowspan=<%=user.getStudentDataResponses().size() %>><%=user.getDepartment() %></td>
+			<td><a href="<%=request.getContextPath()%>/getId?id=<%=user.getStudentDataResponses().get(0).getStudentId() %>>"><%=user.getStudentDataResponses().get(0).getStudentId() %></a></td>
+			<td><%=user.getStudentDataResponses().get(0).getMark() %></td>		
+			<td rowspan=<%=user.getStudentDataResponses().size() %>><%=user.getPass() %></td>
+		</tr>
+		<% for(int i = 1; i < user.getStudentDataResponses().size(); i++) { %>
+			<tr>
+				<td><a href="<%=request.getContextPath()%>/getId?id=<%=user.getStudentDataResponses().get(i).getStudentId() %>>"><%=user.getStudentDataResponses().get(i).getStudentId() %></a></td>
+				<td><%=user.getStudentDataResponses().get(i).getMark() %></td>		
+			</tr>
+		<% } %>
+	<%} %>
 	</tbody>
 </table>
 

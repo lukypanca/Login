@@ -59,4 +59,12 @@ public class User {
 //    	this.pass = pass;
 //    }
 	
+    public String toString() {
+        return "User{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", department='" + department + '\'' +
+                ", mark='" + mark + '\'' +
+                '}';
+    }
 }
