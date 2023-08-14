@@ -24,7 +24,7 @@
 <body>
 <!-- Pop-up -->
 <div class="popup" id="popup">
-  <p>Ini adalah isi dari pop-up.</p>
+  <p>Student Name = </p>
   <button onclick="closePopup()">Tutup</button>
 </div>
 
